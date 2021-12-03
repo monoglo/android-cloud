@@ -5,10 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "cap-sync": "npx cap sync",
+    "cap-open-android": "npx cap open android"
   },
   "dependencies": {
+    "@capacitor/android": "^3.3.2",
+    "@capacitor/cli": "^3.3.2",
+    "@capacitor/core": "^3.3.2",
     "core-js": "^3.6.5",
+    "vant": "^3.3.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -42,7 +48,14 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
+    }
   },
   "browserslist": [
     "> 1%",

@@ -1,10 +1,23 @@
 <template>
+  <the-navbar :showLeft="$router.currentRoute.value.path != '/'" />
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
 </template>
+
+<script>
+import TheNavbar from "@/components/TheNavbar";
+export default {
+  components: {
+    "the-navbar": TheNavbar,
+  },
+  created() {
+    console.info(this.$router.currentRoute.value.path);
+  },
+};
+</script>
 
 <style lang="scss">
 #app {

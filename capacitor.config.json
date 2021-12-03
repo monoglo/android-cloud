@@ -1,0 +1,6 @@
+{
+  "appId": "com.dgtec.androidcloud",
+  "appName": "Android Cloud",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
